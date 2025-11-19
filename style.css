@@ -4,6 +4,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+  nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: transparent;
+    }
+
+    nav .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    nav .logo span {
+      color: #00e676;
+    }
 
 body {
   background: linear-gradient(135deg, #121212, #1e1e1e);

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | ExpenseMate</title>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: transparent;
+    }
+
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
+
+    .logo span {
+      color: #00e676;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #ddd;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #00e676;
+    }
+
+    /* About Section */
+    .about {
+      flex: 1;
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .about h1 {
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #00e676;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      opacity: 0.85;
+      margin-bottom: 30px;
+    }
+
+    .about .highlight {
+      color: #00e676;
+      font-weight: 600;
+    }
+
+    .team-section {
+      margin-top: 60px;
+    }
+
+    .team-section h2 {
+      font-size: 2rem;
+      color: #00e676;
+      margin-bottom: 20px;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    .team-member img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 3px solid #00e676;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .team-member h3 {
+      font-size: 1.4rem;
+      margin-bottom: 8px;
+    }
+
+    .team-member p {
+      opacity: 0.75;
+      max-width: 600px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about h1 {
+        font-size: 2.1rem;
+      }
+      .about p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <nav>
+    <div class="logo">Expense<span>Mate</span></div>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="expenseapp.html">App</a>
+      <a href="about.html">About</a>
+    </div>
+  </nav>
+
+  <!-- ABOUT SECTION -->
+  <section class="about">
+    <h1>About ExpenseMate</h1>
+
+    <p>
+      ExpenseMate is a simple and fast <span class="highlight">expense management app</span>
+      created to help people track their daily spending without any complicated setup.
+      No logins. No servers. No confusing dashboards.  
+      Just clean, intuitive money tracking — right inside your browser.
+    </p>
+
+    <p>
+      Every transaction is stored safely in your <span class="highlight">local storage</span>,
+      meaning your data stays on your device and is never sent anywhere else.
+      You stay in full control, always.
+    </p>
+
+    <p>
+      Whether you're a student, a professional, or anyone trying to manage your money,
+      ExpenseMate gives you the freedom to add income, record expenses, and track your balance
+      with complete ease.
+    </p>
+
+    <!-- TEAM SECTION -->
+    <div class="team-section">
+      <h2>Creator</h2>
+
+      <div class="team-member">
+        <img src="/GITHUB~1.JPG" alt="Creator Image" />
+
+        <h3>Sarabjit Singh</h3>
+        <p>
+          A passionate developer who loves building simple, powerful web applications.
+          ExpenseMate is designed with one goal — to make money tracking effortless and accessible for everyone.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 ExpenseMate | Built with passion.</footer>
+</body>
+</html>

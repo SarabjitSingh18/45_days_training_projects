@@ -1,64 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Expense Tracker</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Expense Tracker by sarabjit singh</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Manager</title>
 
-      <div class="balance-container">
-        <h2>Your Balance</h2>
-        <h1 id="balance">$0.00</h1>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
 
-        <div class="summary">
-          <div class="income">
-            <h3>Income</h3>
-            <p id="income-amount">$0.00</p>
-          </div>
-          <div class="expenses">
-            <h3>Expenses</h3>
-            <p id="expense-amount">$0.00</p>
-          </div>
-        </div>
-      </div>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Inter", sans-serif;
+    }
 
-      <div class="main-content">
-        <div class="transaction-container">
-          <h2>Transactions</h2>
-          <ul id="transaction-list">
-            <!-- TRANSACTIONS WILL BE INSERTED HERE -->
-          </ul>
-        </div>
+    body {
+      background: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+a{
+  text-decoration: none;
+color: #000;
+}
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: transparent;
+    }
 
-        <div class="form-container">
-          <h2>Add Transaction</h2>
+    nav .logo {
+      font-size: 1.6rem;
+      font-weight: 700;
+    }
 
-          <form id="transaction-form">
-            <div class="form-group">
-              <label for="description">Description</label>
-              <input type="text" id="description" placeholder="Enter description..." required />
-            </div>
+    nav .logo span {
+      color: #00e676;
+    }
 
-            <div class="form-group">
-              <label for="amount">Amount</label>
-              <input type="number" id="amount" placeholder="Enter amount..." required />
-              <small>Use negative (-) for expenses</small>
-            </div>
+    /* Hero Section */
+    .hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-            <button type="submit">Add Transaction</button>
-          </form>
-        </div>
-      </div>
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      max-width: 700px;
+      line-height: 1.2;
+    }
+
+    .hero h1 span {
+      color: #00e676;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      max-width: 600px;
+      font-size: 1.1rem;
+      opacity: 0.85;
+    }
+
+    .hero button {
+      margin-top: 30px;
+      background: #00e676;
+      color: #000;
+      border: none;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .hero button:hover {
+      transform: scale(1.05);
+      background: #00c868;
+    }
+
+    /* Features Section */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 60px 40px;
+      background: #111;
+    }
+
+    .feature-box {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      transition: 0.3s;
+    }
+
+    .feature-box:hover {
+      border-color: #00e676;
+      transform: translateY(-5px);
+    }
+
+    .feature-box h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+      color: #00e676;
+    }
+
+    .feature-box p {
+      opacity: 0.8;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Expense<span>Mate</span></div>
+  </nav>
+
+  <section class="hero">
+    <h1>Track Your <span>Expenses</span> Effortlessly</h1>
+    <p>
+      A simple and fast expense manager where you can add income, log your
+      spending, and track your balance — all stored locally in your browser.
+    </p>
+<div class="redirect-btns">
+    
+    <button><a href="/expenseapp.html">Get Started</a></button>
+    <button><a href="/about.html">About us</a></button>
+</div>
+  </section>
+
+  <section class="features">
+    <div class="feature-box">
+      <h3>Add Expenses</h3>
+      <p>Easily record what you spent and keep everything organized.</p>
     </div>
 
-    <script src="script.js"></script>
-  </body>
+    <div class="feature-box">
+      <h3>Add Income</h3>
+      <p>Track your gains and maintain a perfect balance record.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Local Storage</h3>
+      <p>Your data stays safe on your device — no database needed.</p>
+    </div>
+
+    <div class="feature-box">
+      <h3>Delete Transactions</h3>
+      <p>Modify or remove your logs anytime with one click.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 ExpenseMate | Manage your money smartly.
+  </footer>
+
+  <script>
+    
+  </script>
+</body>
 </html>
